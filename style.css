@@ -1,0 +1,412 @@
+@font-face {
+    font-family: gputeks;
+    src: url(font/Gputeks-Regular.woff) format("woff"),
+    url(font/Gputeks-Regular.woff2) format("woff2");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: gputeks;
+}
+html{
+    font-size: 15px;
+}
+h1{
+    font-size: 7rem;
+}
+h2{
+    font-size: 3rem;
+}
+p,a{
+    font-size: 1rem;
+}
+nav{
+    height: calc(100vh - 160px);
+    width: 430px;
+    margin: 80px 0;
+    background-color: #3E4761;
+    position: fixed;
+    right: 0;
+    display: flex;
+    overflow: hidden;
+    transform: translateX(315px);
+    transition: 0.5s;
+    z-index: 1000;
+    
+
+}
+.nav-left h2{
+
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    margin: 0 auto;
+    margin-top: 50px;
+   font-size: 25px;
+    margin-left: 20px;
+    
+    
+}
+.nav-left{
+   
+   padding: 20px;
+  
+}
+.nav-right{
+display: flex;
+    padding: 15px;
+    margin-left: 40px;
+    justify-content: center;
+    align-items: center;
+}
+nav:hover{
+    transform: translateX(0);
+
+}
+.nav-items{
+    display: flex;
+    flex-direction: column;
+  height: 290px;
+  justify-content: space-around;
+  
+
+}
+.nav-items a:hover{
+  filter: blur(0px);
+  
+}
+.nav-items a{
+    color: white;
+  text-decoration: none;
+  filter: blur(7px);
+  transition: 1s;
+  
+}
+
+    
+
+header{
+    background-color: #222735;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+
+}
+.planet{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 50%;
+    
+}
+.rocket{
+    position: absolute;
+    top: 30%;
+    left: 40%; 
+    height: 351px; 
+    width: 247px;
+    animation: header-rocket-fly 10s linear 1s 1 both;
+}
+.header-bg{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+.header-content{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 25px;
+    z-index: 100;
+}
+.about{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    background-color: #222735;
+}
+.about-left{
+    width: 50%;
+   height: 100%;
+   position: relative;
+
+}
+.about-right{
+    width: 50%;
+    height: 100%;
+    padding-right: 120px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.about-right h2{
+    color: white;
+
+}
+.about-right p{
+    color: white;
+}
+.two-planets{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+
+}
+.about-alien{
+    background: url(img/section-2-alien.svg) center/cover no-repeat;
+    position: absolute;
+    width: 155px;
+    height: 197px;
+    top: 30%;
+    left: 30%;
+    animation: about-alien-move 7s linear 0s infinite;
+
+}
+.header-content{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    height: 90%;
+    justify-content: space-around;
+}
+.header-content a{
+    width: 210px;
+    background: linear-gradient(90deg, #FFB762 0%, #CF54A5 27.6%, #263B6C 73.96%, #FFB762 100%);
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    background-size: 300%;
+    animation: header-gradient-button 5s linear infinite;
+}
+.about-alien img{
+    position: absolute;
+    top: 36%;
+    left: 42%;
+    animation: about-alien-eye 5s linear 0s infinite;
+}
+.robot{
+    width: 100%;
+    height: 100vh;
+    background-color: #222735;
+    background: url("img/section-3-bg.svg") bottom/100% no-repeat,  #222735;
+}
+.robot-top{
+    color: white;
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+.robot-bottom{
+    height: 50%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.robot-top-right{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+.robot-top-left{
+    width: 50%;
+    height: 100%;
+    padding-left: 30px;
+    padding-top: 100px;
+
+}
+.robot-top-left h2{
+    margin-bottom: 30px;
+}
+.study-rovers-list{
+    display: flex;
+    list-style-type: none;
+    width: 100%;
+    justify-content: space-around;
+    padding-right: 115px;
+}
+.robot-rover{
+    height: 80%;
+    position: absolute;
+    animation: robot-rover-move 10s linear 0s infinite;
+    
+}
+.robot-alien{
+    height: 80%;
+    position: absolute;
+    animation: robot-alien-move 10s linear 0s infinite;
+}
+
+.space{
+    width: 100%;
+    height: 100vh;
+    background-color: #FFB762;
+}
+.space h2{
+    height: 10%;
+    text-align: center;
+}
+.space-container{
+    height: 90%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.space-orbit{
+    border-radius: 50%;
+    border: 1px solid white;
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    animation: space-orbit-move 15s linear infinite;
+}
+footer{
+    height: 60vh;
+    width: 100%;
+    background-color: #FFB762;
+}
+.space-phobos{
+    position: absolute;
+    left: -8%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    animation: space-planet-move 15s linear infinite;
+}
+.space-deimos{
+    position: absolute;
+    left: 20%;
+    top: -2%;
+    animation: space-planet-move 15s linear infinite;
+}
+
+
+
+
+@keyframes header-rocket-fly{
+    0%{
+      top: 100%; 
+      left: 10%; 
+      transform: rotate(90deg);
+    }
+    50%{
+        top: 10%;
+        left: 45%;
+       transform: rotate(45deg);
+    }
+    100%{
+        left: 55%;
+        top: 40%;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes about-alien-move{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(150px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes about-alien-eye{
+    0%{
+        transform: translateX(0px);
+    }
+    33%{
+        transform: translateX(15px);
+    }
+    66%{
+        transform: translateX(-15px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    
+}
+
+@keyframes robot-rover-move{
+    0%{
+        left: 50%;
+        transform: rotateY(180deg);
+    }
+    15%{
+        left: 80%;
+        transform: rotateY(0deg);
+    }
+    30%{
+        left: 10%;
+        transform: rotateY(0deg);
+    }
+    45%{
+        left: 80%;
+        transform: rotateY(0deg);  
+    }
+    60%{
+        left: 50%;
+        transform: rotateY(180deg); 
+    }
+    80%{
+        left: 50%;
+        transform: rotateY(180deg); 
+    }
+    100%{
+        left: 200%;
+        transform: rotateY(180deg);
+    }
+}
+@keyframes robot-alien-move{
+    0%{
+        left: -100%;
+    }
+    45%{
+        left: 0%;
+    }
+    80%{
+        left: 30%;
+    }
+    100%{
+        left:200%;
+    }
+}
+@keyframes space-orbit-move{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes space-planet-move{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+@keyframes header-gradient-button{
+    0%{
+        background-position-x: 0%;
+
+    }
+    100%{
+        background-position-x: 300%;
+    }
+}
+
+
+
